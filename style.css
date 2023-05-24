@@ -6,6 +6,7 @@
 
 :root {
     font-size: 62.5%;
+    --default-border: 0.1rem solid rgba(0, 0, 0, 0.15);
 }
 
 body {
@@ -61,7 +62,7 @@ main {
     grid-area: form;
     width: 60rem;
     height: 52rem;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    border: var(--default-border);
     padding: 4.4rem 5.7rem;
     border-radius: 1.2rem;
 }
@@ -108,6 +109,79 @@ main .actions a + a:hover {
     border: 0.1rem solid #FF5678;
 }
 
+main header {
+    display: flex;
+    gap: 0 1.8rem;
+    align-items: center;
+}
+
+main header i {
+    font-size: 2rem;
+    color: #FF5678;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+main form label {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    display: block;
+}
+
+main form :is(input, select) {
+    width: 49rem;
+    height: 5.5rem;
+
+    background-color: #FFF;
+    border: var(--default-border);
+    border-radius: 1.2rem;
+}
+
+main form select {
+    appearance: none;
+}
+
+main form .select-div {
+    position: relative;
+}
+
+main form .select-div::after {
+    top: 1.5rem;
+    right: 1.2rem;
+    font-size: 2.4rem;
+    content: '\f107';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 600;
+    position: absolute;
+    z-index: 1;
+    color: #35E6E9;
+}
+
+optgroup {
+    font-size: 1.8rem;
+}
+
+main form .points {
+    position: relative;
+}
+
+main form input + button {
+    position: absolute;
+    right: -4rem;
+    top: 5.2rem;
+    background-color: transparent;
+    border: none;
+    color: #35E6E9;    
+    font-size: x-large;
+    cursor: pointer;
+}
+
 main footer p {
     font-size: 1.6rem;
     margin-top: 8rem;
@@ -120,3 +194,4 @@ main footer a {
     text-align: center;
     color: #000;
 }
+
